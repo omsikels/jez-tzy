@@ -28,16 +28,15 @@ noBtn.addEventListener("touchstart", moveNoButton);
 yesBtn.addEventListener("click", () => {
   document.body.innerHTML = `
     <div style="
-      min-height:100vh;
+      height:100vh;
       display:flex;
       flex-direction:column;
       justify-content:center;
       align-items:center;
       background:linear-gradient(135deg,#ff9a9e,#fad0c4);
-      text-align:center;
-      padding:20px;">
+      text-align:center;">
       <h1>Yay!! 💘🎉</h1>
-      <p style="font-size:1.3rem;">You just made my whole day 🥰</p>
+      <p style="font-size:1.3rem;">You’re officially my Valentine 🥰</p>
     </div>
   `;
 });
