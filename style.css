@@ -47,7 +47,7 @@ h1 {
 
 /* Buttons */
 button {
-  position: fixed; /* Make buttons fixed to the viewport */
+  position: fixed;   /* Fixed positioning relative to the viewport */
   border: none;
   padding: 14px 26px;
   font-size: 1.1rem;
