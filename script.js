@@ -4,13 +4,22 @@ const yesBtn = document.getElementById("yesBtn");
 let yesScale = 1;
 
 function moveNoButton() {
-  const padding = 20;
+  const margin = 16; // safe visible padding
 
-  const maxX = window.innerWidth - noBtn.offsetWidth - padding;
-  const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+  const viewportWidth = document.documentElement.clientWidth;
+  const viewportHeight = document.documentElement.clientHeight;
 
-  const x = Math.random() * maxX;
-  const y = Math.random() * maxY;
+  const btnWidth = noBtn.offsetWidth;
+  const btnHeight = noBtn.offsetHeight;
+
+  const maxX = viewportWidth - btnWidth - margin;
+  const maxY = viewportHeight - btnHeight - margin;
+
+  const minX = margin;
+  const minY = margin;
+
+  const x = Math.random() * (maxX - minX) + minX;
+  const y = Math.random() * (maxY - minY) + minY;
 
   noBtn.style.left = `${x}px`;
   noBtn.style.top = `${y}px`;
@@ -36,7 +45,7 @@ yesBtn.addEventListener("click", () => {
       background:linear-gradient(135deg,#ff9a9e,#fad0c4);
       text-align:center;">
       <h1>Yay!! 💘🎉</h1>
-      <p style="font-size:1.3rem;">You’re officially my Valentine 🥰</p>
+      <p style="font-size:1.3rem;">You didn’t even hesitate 😌</p>
     </div>
   `;
 });
