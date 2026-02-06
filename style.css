@@ -44,7 +44,7 @@ h1 {
 
 /* Buttons */
 button {
-  position: absolute;
+  position: fixed;
   border: none;
   padding: 14px 26px;
   font-size: 1.1rem;
