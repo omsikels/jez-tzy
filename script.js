@@ -42,7 +42,7 @@ noBtn.addEventListener("touchstart", moveNoButton);
 // Handle Yes button click
 yesBtn.addEventListener("click", () => {
   playground.innerHTML = `
-    <h1>Yay!! 💘🎉</h1>
-    <p style="font-size:1.3rem;">You’re officially my Valentine 🥰</p>
+    <h1>Yon OH!! 💘🎉</h1>
+    <p style="font-size:1.3rem;">Kanya kanyang bayad sa Feb 14 ah 🥰</p>
   `;
 });
