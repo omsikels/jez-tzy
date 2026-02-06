@@ -5,7 +5,7 @@ const yesBtn = document.getElementById("yesBtn");
 let yesScale = 1;
 
 function moveNoButton() {
-  const margin = 20; // safe margin from edges
+  const margin = 20; // safe margin
 
   // Get the actual dimensions of the playground
   const bounds = playground.getBoundingClientRect();
@@ -24,11 +24,11 @@ function moveNoButton() {
   const x = Math.random() * (maxX - minX) + minX;
   const y = Math.random() * (maxY - minY) + minY;
 
-  // Apply the new position to the No button
-  noBtn.style.left = `${x}px`;
-  noBtn.style.top = `${y}px`;
+  // Apply the new position to the No button (fixed position in playground bounds)
+  noBtn.style.left = `${x + bounds.left}px`; // Add the offset relative to playground
+  noBtn.style.top = `${y + bounds.top}px`;  // Add the offset relative to playground
 
-  // Grow the Yes button to apply some fun effect
+  // Grow the Yes button with each click
   yesScale += 0.15;
   yesBtn.style.transform = `translateX(-120%) scale(${yesScale})`;
 }
