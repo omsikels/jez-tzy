@@ -4,11 +4,10 @@ const yesBtn = document.getElementById("yesBtn");
 let yesScale = 1;
 
 function moveNoButton() {
-  const container = document.querySelector(".container");
-  const rect = container.getBoundingClientRect();
+  const padding = 20;
 
-  const maxX = rect.width - noBtn.offsetWidth;
-  const maxY = rect.height - noBtn.offsetHeight;
+  const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+  const maxY = window.innerHeight - noBtn.offsetHeight - padding;
 
   const x = Math.random() * maxX;
   const y = Math.random() * maxY;
@@ -17,7 +16,7 @@ function moveNoButton() {
   noBtn.style.top = `${y}px`;
 
   yesScale += 0.15;
-  yesBtn.style.transform = `scale(${yesScale})`;
+  yesBtn.style.transform = `translateX(-120%) scale(${yesScale})`;
 }
 
 // Desktop
@@ -38,7 +37,7 @@ yesBtn.addEventListener("click", () => {
       text-align:center;
       padding:20px;">
       <h1>Yay!! 💘🎉</h1>
-      <p style="font-size:1.2rem;">Best decision ever 😎</p>
+      <p style="font-size:1.3rem;">You just made my whole day 🥰</p>
     </div>
   `;
 });
